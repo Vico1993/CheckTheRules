@@ -34,12 +34,15 @@ func New() *Rules {
 }
 
 // Get retourn a specif key of our config file.
+// @param key string Key to get in the config file
+// @return map[string]string
 func Get(key string) map[string]string { return r.get(key) }
 func (r *Rules) get(key string) map[string]string {
 	return r.config.GetStringMapString(strings.ToLower(key))
 }
 
 // GetGeneralConfig return all general configuration
+// @return map[string]string
 func (r *Rules) getGeneralConfig() map[string]string {
 	return r.get("general")
 }
