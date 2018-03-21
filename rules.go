@@ -19,8 +19,8 @@ type Rules struct {
 	config *viper.Viper
 }
 
-// New return an initialized Rules instances
-func New() *Rules {
+// NewRules return an initialized Rules instances
+func NewRules() *Rules {
 	r := new(Rules)
 
 	// Set config file name
